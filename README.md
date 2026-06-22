@@ -1,17 +1,52 @@
-# React + Vite
+# React Router Example
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React app built with Vite that shows how React Router works.
 
-Currently, two official plugins are available:
+The app has a layout wrapper with a header and footer, and three pages:
+- Home
+- About
+- Contact
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+The project uses `react-router-dom` v7 to show nested routes inside a layout.
+The main layout displays the header, page content, and footer.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js 14 or higher
+- npm or yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Quick start
+
+```bash
+cd react/router
+npm install
+npm run dev
+```
+
+## App structure
+
+- `src/main.jsx` — app entry and router config
+- `src/App.jsx` — top-level app shell with header and footer
+- `src/hoc/layout.jsx` — layout wrapper with `<Outlet />`
+- `src/components/home/home.jsx` — Home page content
+- `src/components/About/about.jsx` — About page content
+- `src/components/contact/contact.jsx` — Contact page content
+- `src/components/header/header.jsx` — navigation bar
+- `src/components/footer/footer.jsx` — footer content
+
+## Routes
+
+- `/` → Home page
+- `/about` → About page
+- `/contact` → Contact page
+
+## Notes
+
+- Open `src/main.jsx` to see how routes are defined.
+- Open `src/hoc/layout.jsx` to see how the shared layout works.
+- Use `npm run dev` to start the local server.
+- Use `npm run build` to build the app for production.
+
 # Supreethraj_Task30
